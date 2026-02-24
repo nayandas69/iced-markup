@@ -1,0 +1,46 @@
+[package]
+name = "iced-markup"
+version = "0.1.0"
+edition = "2021"
+authors = ["Nayan Das <https://github.com/nayandas69>"]
+license = "MIT"
+description = "A declarative markup DSL for building Iced GUI applications in Rust"
+repository = "https://github.com/nayandas69/iced-markup"
+homepage = "https://github.com/nayandas69/iced-markup"
+keywords = ["iced", "gui", "markup", "dsl", "proc-macro"]
+categories = ["gui", "development-tools::procedural-macro-helpers"]
+readme = "README.md"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+# proc-macro-error2: Provides better compile-time error messages for proc macros.
+proc-macro-error2 = "2"
+
+# proc-macro2: Wrapper around the compiler's proc_macro API for use outside of
+# procedural macro contexts (e.g. in unit tests).
+proc-macro2 = "1"
+
+# quote: Quasi-quoting macro that turns Rust syntax tree data structures into
+# tokens of source code. Used heavily in the code generation phase.
+quote = "1"
+
+# syn: Full-featured parser for Rust source code. Drives the entire parsing
+# pipeline from token stream to our custom AST.
+syn = { version = "2", features = ["full", "parsing", "extra-traits"] }
+
+[dev-dependencies]
+# insta: Snapshot testing library. Captures generated code output and compares
+# it against stored snapshots so regressions are caught automatically.
+insta = "1"
+
+# prettyplease: Rust code formatter used in tests to produce human-readable
+# output from the generated token streams.
+prettyplease = "0.2"
+
+[lints.clippy]
+all = "warn"
+pedantic = "warn"
+nursery = "warn"
+perf = "warn"

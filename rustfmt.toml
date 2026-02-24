@@ -1,0 +1,9 @@
+# iced-markup rustfmt configuration
+# Enforces a clean, consistent code style across the project.
+
+use_field_init_shorthand = true
+use_try_shorthand = true
+normalize_comments = true
+wrap_comments = true
+imports_granularity = "Module"
+group_imports = "StdExternalCrate"
