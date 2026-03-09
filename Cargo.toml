@@ -1,0 +1,32 @@
+[package]
+name = "iced-markup"
+version = "0.1.0-beta"
+edition = "2021"
+authors = ["Nayan Das <https://github.com/nayandas69>"]
+license = "MIT"
+description = "A declarative markup DSL for building Iced GUI applications in Rust"
+repository = "https://github.com/nayandas69/iced-markup"
+homepage = "https://github.com/nayandas69/iced-markup"
+keywords = ["iced", "gui", "markup", "dsl", "proc-macro"]
+categories = ["gui", "development-tools::procedural-macro-helpers"]
+readme = "README.md"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+proc-macro-error2 = "2"
+proc-macro2 = "1"
+quote = "1"
+syn = { version = "2", features = ["full", "parsing", "extra-traits"] }
+
+[dev-dependencies]
+insta = "1"
+prettyplease = "0.2"
+iced = "0.14"
+
+[lints.clippy]
+all = "warn"
+pedantic = "warn"
+nursery = "warn"
+perf = "warn"

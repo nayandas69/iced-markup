@@ -1,0 +1,5 @@
+# iced-markup rustfmt configuration
+# Enforces a clean, consistent code style across the project.
+
+use_field_init_shorthand = true
+use_try_shorthand = true

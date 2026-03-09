@@ -1,0 +1,15 @@
+{
+    "rust-analyzer.check.command": "clippy",
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    "[rust]": {
+        "editor.semanticHighlighting.enabled": true
+    },
+    "files.exclude": {
+        "**/target": true,
+        "**/*.rs.bk": true,
+        "Iced": true
+    },
+    "rust-analyzer.procMacro.enable": true,
+    "rust-analyzer.cargo.features": "all"
+}
